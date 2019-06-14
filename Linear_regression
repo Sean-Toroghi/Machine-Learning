@@ -14,6 +14,11 @@ diabetes = datasets.load_diabetes()
 # Use only one feature
 diabetes_X = diabetes.data[:, np.newaxis, 2]
 
+#count # data-points
+counts = np.count_nonzero(diabetes_X)
+print ("Number of data points:",counts)
+
+
 #split independant dataset into training/test
 X_train = diabetes_X[:-25]
 X_test = diabetes_X[-25:]
